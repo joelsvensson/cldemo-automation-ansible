@@ -60,7 +60,7 @@ The *inventory* is a list of all of the hostnames in the network, broken out int
 This folder contains variables applied across groups of servers, written in yaml format. We use variables in the `all` group to define our entire layer 3 fabric and leave it up to the templates to select the appropriate variables. In a more complicated infrastructure, we can create group-specific variable files to spread out the 
 
 ### `roles/`
-This contains the tasks that can be applied to host groups. Each role contains up to four folders. In this demo, we deploy the quagga and ifupdown2 roles on our switches and servers, ifupdown on both servers, and apache only on server02.
+This contains the tasks that can be applied to host groups. Each role contains up to four folders. In this demo, we deploy the frr and ifupdown2 roles on our switches and servers, ifupdown on both servers, and apache only on server02.
 
  * `tasks/main.yml` - list of actual tasks to be applied
  * `handlers/main.yml` - list of handlers to be called when tasks result in a change (such as restarting daemons when config changes)
